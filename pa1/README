@@ -1,0 +1,13 @@
+/*********************************************************************************
+* Abhinav Sunil, aksunil
+* 2022 Winter CSE101 PA#1
+* README
+* Table of Contents
+*********************************************************************************/
+
+List.h: header file for List ADT
+List.c: C file with definitions for List ADT
+ListClient.c: test client for List ADT
+Lex.c: Provides indirect sorting through Linked List for two txt files
+Makefile: make, compile, clean and test
+README: 
