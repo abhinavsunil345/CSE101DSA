@@ -140,7 +140,7 @@ int get(List a){
 	//return;
 	exit(EXIT_FAILURE);
 	}
-	if (a->cursor == NULL){
+	if (a->i < 0){
 		printf("Cursor has not been set\n");
 		//return;
 		exit(EXIT_FAILURE);
@@ -201,6 +201,23 @@ void clear(List a){
 	
 
 void set(List a, int x){
+	if(a == NULL){
+	printf("List is NULL\n");
+	//return;
+	exit(EXIT_FAILURE);
+	}
+	
+	if(isEmpty(a)){
+	printf("List is empty\n");
+	return;
+	//exit(EXIT_FAILURE);
+	} 
+	if (a->i < 0){
+		printf("Cursor has not been set\n");
+		return;
+		//exit(EXIT_FAILURE);
+	}
+		
 	
 	a->cursor->data = x;
 }
