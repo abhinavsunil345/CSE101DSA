@@ -1,6 +1,6 @@
 /*********************************************************************************
 * Abhinav Sunil, aksunil
-* 2022 Winter CSE101 PA#1
+* 2022 Winter CSE101 PA#2
 * List.h
 * List ADT Header file
 * same as the one in PA1 description

@@ -1,8 +1,19 @@
+
+#------------------------------------------------------------------------------
+# Makefile for CSE 101 Programming Assignment 2
+#*********************************************************************************
+#* Abhinav Sunil, aksunil
+#* 2022 Winter CSE101 PA#2
+#* Makefile
+#* Make, compiles, cleans, checks and tests
+#*********************************************************************************
+#
 #------------------------------------------------------------------------------
 #  Makefile for CMPS 101 Programming Assignment 2
 #
 #  make                     makes FindPath
 #  make GraphClient         makes GraphClient
+#  make GraphTest           makes GraphTest
 #  make clean               removes binaries
 #  make checkFind           tests FindPath for memory leaks on in7
 #  make checkClient         tests GraphClient for memory leaks

@@ -63,18 +63,30 @@ int getSource(Graph G) {
 	return G->source;
 }
 int getParent(Graph G, int u) {
+	if ( u > getOrder(G) || u < 1){
+		printf("input not in range\n");
+		exit(EXIT_FAILURE);
+	}
 	if (G->source == NIL){
 		return NIL;
 	}
 	return G->parent[u];
 }
 int getDist(Graph G, int u) {
+	if ( u > getOrder(G) || u < 1){
+		printf("input not in range\n");
+		exit(EXIT_FAILURE);
+	}
 	if (G->source == NIL){
 		return INF;
 	}
 	return G->distance[u];
 }
 void getPath(List L, Graph G, int u){
+	if ( u > getOrder(G) || u < 1){
+		printf("input not in range\n");
+		return;
+	}
 	if (G->source == NIL){
 		printf("Source not set, run BFS/n");
 		return;
@@ -118,18 +130,21 @@ void makeNull(Graph G) {
 	G->parent = (int*)malloc((G->order + 1) * sizeof(int));
 		free(tmp4);
 	
+	G->order = 0;
+	G->size = 0;
 	
 	G->source = NIL;
 	
 }
 void addEdge(Graph G, int u, int v) {
-	//printf("The order is %d \n", getOrder(G));
+		//printf("The order is %d \n", getOrder(G));
 	if ( u > getOrder(G) || u < 1){
+		printf("u not in range\n");
 		return;
 	}
 	
 	if ( v > getOrder(G) || v < 1){
-		//printf("v not in range\n");
+		printf("v not in range\n");
 		return;
 	}
 	
@@ -181,6 +196,15 @@ void addEdge(Graph G, int u, int v) {
 
 
 void addArc(Graph G, int u, int v){
+	if ( u > getOrder(G) || u < 1){
+		printf("u not in range\n");
+		return;
+	}
+	
+	if ( v > getOrder(G) || v < 1){
+		printf("v not in range\n");
+		return;
+	}
 	for (moveFront(G->adj[u]); index(G->adj[u]) >= 0; moveNext(G->adj[u])){
 	if (v <= get(G->adj[u]) ){
 						insertBefore(G->adj[u],v);
@@ -231,6 +255,7 @@ void BFS(Graph G, int s){
 		
 /*** Other operations ***/
 void printGraph(FILE* out, Graph G){
+	//printf("%d\n", G->order);
 	for (int i = 1; i < G->order + 1; i++){
 		fprintf(out, "%d: ", i);
 		printList(out, G->adj[i]);
