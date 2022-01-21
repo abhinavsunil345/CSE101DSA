@@ -65,8 +65,7 @@ bool isEmpty(List a) {
 
 	void freeList(List* d){
 	if(d != NULL && *(d)!=NULL){
-		while( isEmpty(*(d)) != true ){
-			deleteBack(*d);
+		clear((*d));
 		}
 		//clear(*(d));
 		free(*d);
@@ -74,7 +73,7 @@ bool isEmpty(List a) {
 	}
 	
 	
-}
+
 
 
 // Acess Functions
