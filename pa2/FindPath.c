@@ -1,3 +1,11 @@
+/*********************************************************************************
+* Abhinav Sunil, aksunil
+* 2022 Winter CSE101 PA#1
+* FindPath.c
+* Takes input file parses to create graph then parses to run BFS to find shortest path then outputs results to output file
+*********************************************************************************/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
@@ -71,8 +79,6 @@ if (argc != 3){
 		}
 		
 		freeList(&L);
-		makeNull(G);
-		freeGraph(&G);
 		freeGraph(&G);
 			
 			
