@@ -1,6 +1,6 @@
 /*********************************************************************************
 * Abhinav Sunil, aksunil
-* 2022 Winter CSE101 PA#1
+* 2022 Winter CSE101 PA#3
 * FindComponents.c
 * Takes input file parses to create graph then parses to run DFS to find strongly connected components then outputs results to output file
 *********************************************************************************/
