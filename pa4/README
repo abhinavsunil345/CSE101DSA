@@ -1,0 +1,16 @@
+/*********************************************************************************
+* Abhinav Sunil, aksunil
+* 2022 Winter CSE101 PA#4
+* README
+* Table of Contents
+*********************************************************************************/
+
+List.h: header file for List ADT
+List.c: C file with definitions for List ADT
+Matrix.h: header file for Matrix ADT
+Matrix.c: C file with definitions for Matrix ADT
+MatrixTest.c: test client for Matrix ADT
+ListTest.c: test client for List ADT
+Sparse.c: Parses and creates two matrices before running multiple operations on them
+Makefile: make, compile, clean and test
+README: 
