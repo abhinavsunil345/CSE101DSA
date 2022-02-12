@@ -1,0 +1,13 @@
+/*********************************************************************************
+* Abhinav Sunil, aksunil
+* 2022 Winter CSE101 PA#5
+* README
+* Table of Contents
+*********************************************************************************/
+
+List.h: header file for List ADT
+List.c: C++ file with definitions for List ADT
+ListTest.c: test client for List ADT
+Shuffle.c: Takes input n and shuffles 1 to n cards finding how many shuffles until original is shuffle is reached
+Makefile: make, compile, clean and test
+README: 
