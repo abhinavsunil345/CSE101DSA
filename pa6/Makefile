@@ -1,3 +1,8 @@
+#* Abhinav Sunil, aksunil
+#* 2022 Winter CSE101 PA#6
+#* Makefile
+#* Make, compiles, cleans, checks and tests
+#*********************************************************************************
 #------------------------------------------------------------------------------
 #  Makefile for CSE 101 Programming Assignment 6
 #
