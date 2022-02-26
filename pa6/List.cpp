@@ -351,7 +351,9 @@ std::string List::to_string() const {
 	for(N=frontDummy->next; N!=backDummy; N=N->next){
 		s += std::to_string(N->data) + ", ";
 	}
+	if (s.length() > 1) {
 	s.erase(s.end()-2, s.end());
+	}
 	s += ")";
 	return s;
 	
