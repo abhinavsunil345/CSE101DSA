@@ -30,7 +30,8 @@ Dictionary::Node::Node(keyType k, valType v){
 void Dictionary::inOrderString(std::string& s, Node* R) const {
 	if (R != nil) {
 		inOrderString(s, R->left);
-		s +=  (R->key + " : " + std::to_string(R->val) + "\n");
+		//s +=  (R->key + " : " + std::to_string(R->val) + "\n");
+		s.append(R->key).append(" : ").append(std::to_string(R->val)).append("\n");
 		inOrderString(s,R->right);
 	}
 }
@@ -41,7 +42,8 @@ void Dictionary::inOrderString(std::string& s, Node* R) const {
 // by a pre-order tree walk.
 void Dictionary::preOrderString(std::string& s, Node* R) const {
 	if (R != nil) {
-		s +=  (R->key + "\n");
+		//s +=  (R->key + "\n");
+		s.append(R->key).append("\n");
 		preOrderString(s, R->left);
 		preOrderString(s, R->right);
 	}
@@ -156,7 +158,7 @@ void Dictionary::transplant(Node* u, Node* v){
 }
 
 Dictionary::Dictionary() {
-	nil = new Node("NIL", -1);
+	nil = new Node("\000", -1);
 	root = nil;
 	current = nil;
 	num_pairs = 0;
@@ -274,32 +276,36 @@ void Dictionary::clear() {
 // If a pair with key==k exists, overwrites the corresponding value with v, 
 // otherwise inserts the new pair (k, v).
 void Dictionary::setValue(keyType k, valType v) {
+
 	Node* y = nil;
 	Node* x = root;
 	Node* z = new Node(k, v);
 	z->left = nil;
 	z->right = nil;
+		
 	//std::cout << x->key << std::endl;
 	while (x != nil){
 		//std::cout << "Hello" << std::endl;
 		y = x;
-		if (z->key == x->key) {
-			x->val = z->val;
-			delete z;
-			return;
-		}
-		if (z->key < x->key) {
+		if (k < x->key) {
 			x = x->left;
 		}
-		else {
+		else if (k > x->key) {
 			x = x->right;
+		}
+		else  {
+			x->val = v;
+			delete z;
+			return;
 		}
 	}
 	z->parent = y;
 	if (y == nil) {
 		this->root = z;
+		this->num_pairs++;
+		return;
 	}
-	else if (z->key < y->key) {
+	if (k < y->key) {
 		y->left = z;
 	}
 	else {
