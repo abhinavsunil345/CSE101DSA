@@ -1,0 +1,13 @@
+/*********************************************************************************
+* Abhinav Sunil, aksunil
+* 2022 Winter CSE101 PA#8
+* README
+* Table of Contents
+*********************************************************************************/
+
+Dictionary.h: header file for Dictionary ADT
+Dictionary.cpp: C++ file with definitions for Dictionary ADT
+DictionaryTest.cpp: test client for List ADT
+Order.cpp: Takes input file and and outputs Dictionary in order and pre order to output file
+Makefile: make, compile, clean and test
+README: 
